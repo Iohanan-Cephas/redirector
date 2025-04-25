@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Admin</title>
+</head>
+<body>
+  <h1>Página de Administração</h1>
+  <p>Link de redirecionamento atual: <strong><%= redirectUrl %></strong></p>
+
+  <form action="/update" method="POST">
+    <label for="newUrl">Novo URL de redirecionamento:</label>
+    <input type="text" id="newUrl" name="newUrl" required />
+    <button type="submit">Atualizar Link</button>
+  </form>
+</body>
+</html>

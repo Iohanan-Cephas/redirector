@@ -4,14 +4,12 @@ const port = 3000;
 
 let currentUrl = 'https://www.instagram.com/jperez.me/';
 
-app.use(express.json()); // pra aceitar JSON no body
+app.use(express.json());
 
-// Rota de redirecionamento
 app.get('/', (req, res) => {
   res.redirect(currentUrl);
 });
 
-// Rota para atualizar o link
 app.post('/update', (req, res) => {
   const { newUrl } = req.body;
   if (typeof newUrl === 'string' && newUrl.startsWith('http')) {
